@@ -4,7 +4,6 @@
 
 This project is a key module within **Project Kisan** — an AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
----
 
 ## 🚀 Features
 
@@ -18,7 +17,7 @@ This project is a key module within **Project Kisan** — an AI-driven initiativ
   - Cloud via **Firebase ML Kit**
 - Written in clean, beginner-friendly **Python** code
 
----
+
 
 ## 🛠 Tech Stack
 
@@ -27,7 +26,7 @@ This project is a key module within **Project Kisan** — an AI-driven initiativ
 - OpenCV
 - tqdm
 
----
+
 
 ## 📁 Folder Structure
 
@@ -47,7 +46,7 @@ project-kisan-disease/
 └── split_dataset.py # Dataset splitting script
 ```
 
----
+
 
 ## 🔍 How It Works
 
@@ -58,14 +57,13 @@ project-kisan-disease/
    - Healthy
 3. Future updates will include voice-based feedback and Firebase integration.
 
----
+
 
 ## 🧪 Setup Instructions
 
 ### 1. Clone the Repository
 
 ```bash
-Copy
 git clone https://github.com/yourusername/TomatoLeafAI.git
 cd TomatoLeafAI
 ```
@@ -106,7 +104,7 @@ python test_prediction.py
 ### 6. Convert to TensorFlow Lite (Optional)
 For mobile or Firebase deployment.
 
----
+
   
 ## 🌱 Project Kisan
 
@@ -119,7 +117,7 @@ For mobile or Firebase deployment.
 - ✅ **Government Scheme Finder** (In Progress)
 - ✅ **Multilingual Voice Support** (In Progress)
 
----
+
 
 ## 📞 Contact
 
@@ -128,7 +126,7 @@ For mobile or Firebase deployment.
 - **GitHub**: [ankit-prabhavak](https://github.com/ankit-prabhavak)  
 - **LinkedIn**: [ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
 
----
+
 
 ## 🙏 Credits
 
