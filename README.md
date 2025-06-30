@@ -5,6 +5,8 @@
 This project is a key module within **Project Kisan** : An AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
 
+---
+
 ## 🚀 Features
 
 - Detects tomato leaf conditions:
@@ -17,7 +19,7 @@ This project is a key module within **Project Kisan** : An AI-driven initiative 
   - Cloud via **Firebase ML Kit**
 - Written in clean, beginner-friendly **Python** code
 
-
+---
 
 ## 🛠 Tech Stack
 
@@ -26,7 +28,7 @@ This project is a key module within **Project Kisan** : An AI-driven initiative 
 - OpenCV
 - tqdm
 
-
+---
 
 ## 📁 Folder Structure
 
@@ -46,7 +48,7 @@ project-kisan-disease/
 └── split_dataset.py # Dataset splitting script
 ```
 
-
+---
 
 ## 🔍 How It Works
 
@@ -57,7 +59,7 @@ project-kisan-disease/
    - Healthy
 3. Future updates will include voice-based feedback and Firebase integration.
 
-
+---
 
 ## 🧪 Setup Instructions
 
@@ -104,6 +106,8 @@ python test_prediction.py
 ### 6. Convert to TensorFlow Lite (Optional)
 For mobile or Firebase deployment.
 
+---
+---
 
   
 ## 🌱 Project Kisan
