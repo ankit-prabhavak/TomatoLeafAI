@@ -107,8 +107,6 @@ python test_prediction.py
 For mobile or Firebase deployment.
 
 ---
----
-
   
 ## 🌱 Project Kisan
 
