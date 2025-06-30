@@ -2,7 +2,7 @@
 
 **TomatoLeafAI** is a deep learning–based image classification model designed to detect common diseases in tomato plant leaves with high accuracy. Leveraging the power of **MobileNetV2**, this lightweight model enables real-time disease diagnosis directly from images, making it practical for both mobile deployment and cloud integration.
 
-This project is a key module within **Project Kisan** — an AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
+This project is a key module within **Project Kisan** : An AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
 
 ## 🚀 Features
