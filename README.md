@@ -4,6 +4,7 @@
 
 This project is a key module within **Project Kisan** — an AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
+---
 
 ## 🚀 Features
 
@@ -64,6 +65,7 @@ project-kisan-disease/
 ### 1. Clone the Repository
 
 ```bash
+Copy
 git clone https://github.com/yourusername/TomatoLeafAI.git
 cd TomatoLeafAI
 ```
