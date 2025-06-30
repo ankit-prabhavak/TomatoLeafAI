@@ -1,6 +1,8 @@
 # TomatoLeafAI
 
-**TomatoLeafAI** is an AI-powered model that detects diseases in tomato leaves using deep learning. It is a core component of **Project Kisan**, an AI assistant designed to support small-scale farmers with actionable agricultural insights.
+**TomatoLeafAI** is a deep learning–based image classification model designed to detect common diseases in tomato plant leaves with high accuracy. Leveraging the power of **MobileNetV2**, this lightweight model enables real-time disease diagnosis directly from images, making it practical for both mobile deployment and cloud integration.
+
+This project is a key module within **Project Kisan** — an AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
 
 ## 🚀 Features
@@ -28,7 +30,8 @@
 
 ## 📁 Folder Structure
 
-<pre> ```project-kisan-disease/
+```text
+project-kisan-disease/
 ├── raw_tomato_dataset/
 │   ├── Tomato___Early_blight/
 │   ├── Tomato___Late_blight/
@@ -40,8 +43,8 @@
 ├── test_prediction.py # Prediction script
 ├── requirements.txt # Dependencies
 ├── plant_disease_model.h5 # Trained model
-└── split_dataset.py # Dataset splitting script```<pre>
-
+└── split_dataset.py # Dataset splitting script
+```
 
 ---
 
@@ -73,10 +76,12 @@ pip install -r requirements.txt
 ### 3. Prepare Dataset
 Place the following folders inside a raw_tomato_dataset/ directory:
 
-<pre> ```raw_tomato_dataset/
+```text
+raw_tomato_dataset/
 ├── Tomato___Early_blight/
 ├── Tomato___Late_blight/
-└── Tomato___healthy/```<pre>
+└── Tomato___healthy/
+```
 Then run the dataset splitter to create training and validation sets:
 
 ```bash
