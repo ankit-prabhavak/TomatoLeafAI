@@ -2,7 +2,6 @@
 
 **TomatoLeafAI** is an AI-powered model that detects diseases in tomato leaves using deep learning. It is a core component of **Project Kisan**, an AI assistant designed to support small-scale farmers with actionable agricultural insights.
 
----
 
 ## 🚀 Features
 
@@ -29,7 +28,7 @@
 
 ## 📁 Folder Structure
 
-project-kisan-disease/
+<pre> ```project-kisan-disease/
 ├── raw_tomato_dataset/
 │   ├── Tomato___Early_blight/
 │   ├── Tomato___Late_blight/
@@ -41,7 +40,7 @@ project-kisan-disease/
 ├── test_prediction.py # Prediction script
 ├── requirements.txt # Dependencies
 ├── plant_disease_model.h5 # Trained model
-└── split_dataset.py # Dataset splitting script
+└── split_dataset.py # Dataset splitting script```<pre>
 
 
 ---
@@ -74,10 +73,10 @@ pip install -r requirements.txt
 ### 3. Prepare Dataset
 Place the following folders inside a raw_tomato_dataset/ directory:
 
-raw_tomato_dataset/
+<pre> ```raw_tomato_dataset/
 ├── Tomato___Early_blight/
 ├── Tomato___Late_blight/
-└── Tomato___healthy/
+└── Tomato___healthy/```<pre>
 Then run the dataset splitter to create training and validation sets:
 
 ```bash
@@ -100,7 +99,34 @@ python test_prediction.py
 ### 6. Convert to TensorFlow Lite (Optional)
 For mobile or Firebase deployment.
 
+---
+  
+## 🌱 Project Kisan
 
+**TomatoLeafAI** is part of **Project Kisan**, a Google Hackathon 2025 submission aiming to build a voice-enabled AI assistant for farmers.
+
+### Modules
+
+- ✅ **Disease Detection** (Completed)
+- ✅ **Market Price Insights** (In Progress)
+- ✅ **Government Scheme Finder** (In Progress)
+- ✅ **Multilingual Voice Support** (In Progress)
+
+---
+
+## 📞 Contact
+
+- **Author**: Ankit Kumar  
+- **Email**: [ankitabcd1718@gmail.com](mailto:ankitabcd1718@gmail.com)  
+- **GitHub**: [ankit-prabhavak](https://github.com/ankit-prabhavak)  
+- **LinkedIn**: [ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
+
+---
+
+## 🙏 Credits
+
+- **Dataset**: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)  
+- **Frameworks**: TensorFlow, Keras, OpenCV, tqdm
 
 
 
