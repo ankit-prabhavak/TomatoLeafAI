@@ -115,26 +115,30 @@ python test_prediction.py
 For mobile or Firebase deployment.
 
 ---
-  
+
 ## 🌱 Project Kisan
 
-**TomatoLeafAI** is part of **Project Kisan**, a Google Hackathon 2025 submission aiming to build a voice-enabled AI assistant for farmers.
+*TomatoLeafAI* is a core module of **Project Kisan**, submitted to the Google Hackathon 2025. The objective of the project is to build a voice-enabled AI assistant that delivers essential agricultural support to small and marginal farmers through user-friendly, technology-driven tools.
 
-### Modules
+### Modules Included in Project Kisan
 
-- ✅ **Disease Detection** (In Progress)
-- ✅ **Market Price Insights** (In Progress)
-- ✅ **Government Scheme Finder** (In Progress)
-- ✅ **Multilingual Voice Support** (In Progress)
+- **Disease Detection** – *In Progress*  
+- **Market Price Insights** – *In Progress*  
+- **Government Scheme Finder** – *In Progress*  
+- **Multilingual Voice Support** – *In Progress*
 
-## 📞 Contact
+---
 
-- **Author**: Ankit Kumar  
-- **Email**: [ankitabcd1718@gmail.com](mailto:ankitabcd1718@gmail.com)  
-- **GitHub**: [ankit-prabhavak](https://github.com/ankit-prabhavak)  
-- **LinkedIn**: [ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
+## Contact Information
 
-## 🙏 Credits
+**Author:** Ankit Kumar  
+**Email:** [ankitabcd1718@gmail.com](mailto:ankitabcd1718@gmail.com)  
+**GitHub:** [github.com/ankit-prabhavak](https://github.com/ankit-prabhavak)  
+**LinkedIn:** [linkedin.com/in/ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
 
-- **Dataset**: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)  
-- **Frameworks**: TensorFlow, Keras, OpenCV, tqdm
+---
+
+## Acknowledgements
+
+- **Dataset:** [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)  
+- **Technologies Used:** TensorFlow, Keras, OpenCV, tqdm
