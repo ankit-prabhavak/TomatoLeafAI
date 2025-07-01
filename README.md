@@ -41,12 +41,20 @@ project-kisan-disease/
 ├── dataset/
 │ ├── train/
 │ └── val/
+├── images/
+│   └── tomatoleafai_workflow.jpg
 ├── plant_disease_model.py # Training script
 ├── test_prediction.py # Prediction script
 ├── requirements.txt # Dependencies
 ├── plant_disease_model.h5 # Trained model
 └── split_dataset.py # Dataset splitting script
 ```
+
+---
+
+## Disease Detection Workflow
+
+![TomatoLeafAI Workflow](images/tomatoleafai_workflow.jpg)
 
 ---
 
