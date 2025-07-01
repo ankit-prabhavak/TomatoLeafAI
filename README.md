@@ -115,7 +115,7 @@ For mobile or Firebase deployment.
 
 ### Modules
 
-- ✅ **Disease Detection** (Completed)
+- ✅ **Disease Detection** (In Progress)
 - ✅ **Market Price Insights** (In Progress)
 - ✅ **Government Scheme Finder** (In Progress)
 - ✅ **Multilingual Voice Support** (In Progress)
