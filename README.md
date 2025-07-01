@@ -4,7 +4,6 @@
 
 This project is a key module within **Project Kisan** : An AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
-
 ---
 
 ## 🚀 Features
@@ -72,11 +71,13 @@ cd TomatoLeafAI
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Prepare Dataset
+
 Place the following folders inside a raw_tomato_dataset/ directory:
 
 ```text
@@ -85,6 +86,7 @@ raw_tomato_dataset/
 ├── Tomato___Late_blight/
 └── Tomato___healthy/
 ```
+
 Then run the dataset splitter to create training and validation sets:
 
 ```bash
@@ -92,19 +94,24 @@ python split_dataset.py
 ```
 
 ### 4. Train the Model
+
 ```bash
 python plant_disease_model.py
 ```
+
 The trained model will be saved as:
 plant_disease_model.h5
 
 ### 5. Test the Model
+
 Place a test image (e.g., leaf.jpg) in the project directory. Update the filename inside test_prediction.py and run:
+
 ```bash
 python test_prediction.py
 ```
 
 ### 6. Convert to TensorFlow Lite (Optional)
+
 For mobile or Firebase deployment.
 
 ---
@@ -120,8 +127,6 @@ For mobile or Firebase deployment.
 - ✅ **Government Scheme Finder** (In Progress)
 - ✅ **Multilingual Voice Support** (In Progress)
 
-
-
 ## 📞 Contact
 
 - **Author**: Ankit Kumar  
@@ -129,15 +134,7 @@ For mobile or Firebase deployment.
 - **GitHub**: [ankit-prabhavak](https://github.com/ankit-prabhavak)  
 - **LinkedIn**: [ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
 
-
-
 ## 🙏 Credits
 
 - **Dataset**: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)  
 - **Frameworks**: TensorFlow, Keras, OpenCV, tqdm
-
-
-
-
-
-
