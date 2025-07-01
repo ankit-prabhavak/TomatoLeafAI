@@ -52,7 +52,7 @@ project-kisan-disease/
 
 ---
 
-## 📊 Disease Detection Workflow
+## Disease Detection Workflow
 
 ![TomatoLeafAI Workflow](images/tomatoleafai_workflow.jpg)
 
