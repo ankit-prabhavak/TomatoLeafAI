@@ -1,6 +1,6 @@
 # TomatoLeafAI
 
-**TomatoLeafAI** is a deep learning–based image classification model designed to detect common diseases in tomato plant leaves with high accuracy. Leveraging the power of **MobileNetV2**, this lightweight model enables real-time disease diagnosis directly from images, making it practical for both mobile deployment and cloud integration.
+**TomatoLeafAI** is a deep learning–based image classification model designed to detect common diseases in tomato plant leaves with high accuracy. Leveraging a custom-built **Convolutional Neural Network (CNN) architecture**, this model delivers high-accuracy disease diagnosis directly from tomato leaf images, making it ideal for practical, real-world agricultural applications. It is designed for both educational clarity and future-ready integration with cloud and mobile platforms.
 
 This project is a key module within **Project Kisan** : An AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
 
@@ -13,7 +13,7 @@ This project is a key module within **Project Kisan** : An AI-driven initiative 
   - Early Blight
   - Late Blight
   - Healthy
-- Built on **MobileNetV2** for lightweight and efficient performance
+- Built using a custom **Convolutional Neural Network (CNN)** for improved accuracy and control.
 - Supports deployment on:
   - Mobile devices via **TensorFlow Lite**
   - Cloud via **Firebase ML Kit**
@@ -27,6 +27,7 @@ This project is a key module within **Project Kisan** : An AI-driven initiative 
 - TensorFlow / Keras
 - OpenCV
 - tqdm
+- Custom CNN architecture
 
 ---
 
