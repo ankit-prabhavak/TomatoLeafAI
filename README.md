@@ -52,7 +52,7 @@ project-kisan-disease/
 
 ---
 
-## Disease Detection Workflow
+## 📊 Disease Detection Workflow
 
 ![TomatoLeafAI Workflow](images/tomatoleafai_workflow.jpg)
 
@@ -137,7 +137,7 @@ For mobile or Firebase deployment.
 
 ---
 
-## Contact Information
+## 📞 Contact Information
 
 [![Gmail](https://img.shields.io/badge/Gmail-ankitabcd1718@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:ankitabcd1718@gmail.com)  
 [![GitHub](https://img.shields.io/badge/GitHub-ankit--prabhavak-181717?style=flat&logo=github)](https://github.com/ankit-prabhavak)  
