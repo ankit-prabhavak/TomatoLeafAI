@@ -139,9 +139,9 @@ For mobile or Firebase deployment.
 
 ## 📞 Contact Information
 
-[![Gmail](https://img.shields.io/badge/Gmail-ankitabcd1718@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:ankitabcd1718@gmail.com)  
-[![GitHub](https://img.shields.io/badge/GitHub-ankit--prabhavak-181717?style=flat&logo=github)](https://github.com/ankit-prabhavak)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-ankit--prabhavak-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ankit-prabhavak)
+- **Email:** [ankitabcd1718@gmail.com](mailto:ankitabcd1718@gmail.com)  
+- **GitHub:** [https://github.com/ankit-prabhavak](https://github.com/ankit-prabhavak)  
+- **LinkedIn:** [https://linkedin.com/in/ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
 
 ---
 
