@@ -46,7 +46,9 @@ project-kisan-disease/
 ├── plant_disease_model.py # Training script
 ├── test_prediction.py # Prediction script
 ├── requirements.txt # Dependencies
+├── prediction_results.csv
 ├── plant_disease_model.h5 # Trained model
+├── sample_image1.jpg # Add the leaf images for prediction directly in the root directory 
 └── split_dataset.py # Dataset splitting script
 ```
 
