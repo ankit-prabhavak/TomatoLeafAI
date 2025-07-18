@@ -1,0 +1,1 @@
+This folder is for saving the uploaded images for the model to detect.
