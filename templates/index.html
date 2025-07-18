@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomatoLeafAI - Smart Crop Disease Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>TomatoLeafAI</h1>
+                <span class="tagline">Smart Crop Disease Detection</span>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#results" class="nav-link">Results</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="hero-content">
+                    <h2>Detect Tomato Leaf Diseases Instantly</h2>
+                    <p>Upload photos of your tomato leaves and get instant AI-powered disease detection with treatment recommendations</p>
+                    
+                    <!-- Upload Form -->
+                    <form method="POST" enctype="multipart/form-data" class="upload-form" id="uploadForm">
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h3>Drop your leaf images here</h3>
+                            <p>or click to browse files</p>
+                            <input type="file" name="images" multiple accept="image/*" required class="file-input" id="fileInput">
+                            <div class="file-types">
+                                <span>Supported: JPG, PNG, JPEG</span>
+                            </div>
+                        </div>
+                        
+                        <div class="image-preview" id="imagePreview"></div>
+                        
+                        <button type="submit" class="analyze-btn" id="analyzeBtn">
+                            <i class="fas fa-microscope"></i>
+                            <span>Analyze Images</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works" id="how-it-works">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>1. Take Photos</h3>
+                        <p>Capture clear images of tomato leaves showing any symptoms</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <h3>2. Upload Images</h3>
+                        <p>Drag and drop or select multiple images for analysis</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>3. AI Analysis</h3>
+                        <p>Our advanced AI model analyzes your images instantly</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>4. Get Results</h3>
+                        <p>Receive detailed diagnosis and treatment recommendations</p>
+                    </div>
+                    <div class="step">
+                       <div class="step-icon">
+                             <i class="fas fa-file-csv"></i>
+                       </div>
+                           <h3>5. Download CSV</h3>
+                            <p>Download your prediction results as a CSV file</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>6. Take Action</h3>
+            <p>Apply suggested remedies or consult experts for further help</p>
+        </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            {% if results %}
+            <section class="results" id="results">
+                <h2><i class="fas fa-chart-line"></i> Analysis Results</h2>
+                
+                <div class="results-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="summary-content">
+                            <h3>{{ results|length }}</h3>
+                            <p>Images Analyzed</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="summary-content">
+                            <h3>{{ results|selectattr('pred_class', 'ne', 'Healthy')|list|length }}</h3>
+                            <p>Diseases Detected</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="summary-content">
+                            <h3>{{ results[0].timestamp.split()[1] if results else 'N/A' }}</h3>
+                            <p>Analysis Time</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    {% for res in results %}
+                    <div class="result-card">
+                        <div class="result-image">
+                            <img src="{{ url_for('static', filename='uploads/' + res.image) }}" alt="Analyzed leaf">
+                            <div class="confidence-badge">{{ res.confidence }}</div>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="disease-name">{{ res.pred_class }}</h3>
+                            <div class="disease-status {{ 'healthy' if res.pred_class == 'Healthy' else 'disease' }}">
+                                <i class="fas {{ 'fa-check' if res.pred_class == 'Healthy' else 'fa-exclamation-triangle' }}"></i>
+                                {{ 'Healthy Leaf' if res.pred_class == 'Healthy' else 'Disease Detected' }}
+                            </div>
+                            <div class="diagnosis">
+                                <h4>Diagnosis & Treatment:</h4>
+                                <p>{{ res.treatment }}</p>
+
+                            </div>
+                            <div class="timestamp">
+                                <i class="fas fa-calendar"></i>
+                                {{ res.timestamp }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="download-section">
+                    <a href="{{ url_for('download_csv', path=csv_path) }}" class="download-btn">
+                        <i class="fas fa-download"></i>
+                        <span>Download Detailed Report (CSV)</span>
+                    </a>
+                </div>
+            </section>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TomatoLeafAI</h4>
+                    <p>Empowering farmers with AI-powered crop disease detection</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#help">Help Center</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TomatoLeafAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>Analyzing your images...</h3>
+            <p>Our AI is examining your tomato leaves for diseases</p>
+        </div>
+    </div>
+
+    <script>
+        // File upload handling
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const uploadForm = document.getElementById('uploadForm');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+
+        // Drag and drop functionality
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('drag-over');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('drag-over');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('drag-over');
+            const files = e.dataTransfer.files;
+            fileInput.files = files;
+            handleFiles(files);
+        });
+
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            imagePreview.innerHTML = '';
+            if (files.length > 0) {
+                uploadArea.classList.add('has-files');
+                analyzeBtn.style.display = 'flex';
+                
+                Array.from(files).forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const preview = document.createElement('div');
+                        preview.className = 'preview-item';
+                        preview.innerHTML = `
+                            <img src="${e.target.result}" alt="Preview">
+                            <div class="preview-info">
+                                <span class="file-name">${file.name}</span>
+                                <span class="file-size">${(file.size / 1024 / 1024).toFixed(2)} MB</span>
+                            </div>
+                        `;
+                        imagePreview.appendChild(preview);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+        }
+
+        // Form submission with loading
+        uploadForm.addEventListener('submit', (e) => {
+            loadingOverlay.style.display = 'flex';
+            // Form will submit normally, loading overlay will show
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Auto-scroll to results if they exist
+        {% if results %}
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+            }, 500);
+        });
+        {% endif %}
+    </script>
+</body>
+</html>
