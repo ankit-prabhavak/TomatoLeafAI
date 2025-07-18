@@ -1,36 +1,26 @@
 # TomatoLeafAI
 
-**TomatoLeafAI** is a deep learning–based image classification model designed to detect common diseases in tomato plant leaves with high accuracy. Leveraging a custom-built **Convolutional Neural Network (CNN) architecture**, this model delivers high-accuracy disease diagnosis directly from tomato leaf images, making it ideal for practical, real-world agricultural applications. It is designed for both educational clarity and future-ready integration with cloud and mobile platforms.
+TomatoLeafAI is a deep learning image classifier to detect diseases in tomato plant leaves. It uses a custom Convolutional Neural Network (CNN) to classify images into Early Blight, Late Blight, or Healthy categories. This project is a part of **Project Kisan** – an AI initiative to assist farmers with crop disease detection and other services.
 
-This project is a key module within **Project Kisan** : An AI-driven initiative focused on empowering small and marginal farmers with accessible, technology-based agricultural solutions. TomatoLeafAI aims to assist farmers in identifying crop health issues early, reducing crop losses, and improving yield through timely interventions and expert recommendations.
+## Features
 
----
-
-## 🚀 Features
-
-- Detects tomato leaf conditions:
+- Detects:
   - Early Blight
   - Late Blight
-  - Healthy
-- Built using a custom **Convolutional Neural Network (CNN)** for improved accuracy and control.
-- Supports deployment on:
-  - Mobile devices via **TensorFlow Lite**
-  - Cloud via **Firebase ML Kit**
-- Written in clean, beginner-friendly **Python** code
+  - Healthy Leaves  
+- CNN model trained with high accuracy  
+- Deployment-ready for mobile (TensorFlow Lite) and cloud (Firebase)  
+- Simple Python code for learning and customization
 
----
+## Tech Stack
 
-## 🛠 Tech Stack
-
-- Python 3.x
+- Python 3
 - TensorFlow / Keras
 - OpenCV
 - tqdm
-- Custom CNN architecture
+- Flask
 
----
-
-## 📁 Folder Structure
+## Folder Structure
 
 ```text
 project-kisan-disease/
@@ -39,115 +29,99 @@ project-kisan-disease/
 │   ├── Tomato___Late_blight/
 │   └── Tomato___healthy/
 ├── dataset/
-│ ├── train/
-│ └── val/
+│   ├── train/
+│   └── val/
+├── test_images/
+│   └── test_image.jpg
 ├── images/
 │   └── tomatoleafai_workflow.jpg
-├── plant_disease_model.py # Training script
-├── test_prediction.py # Prediction script
-├── requirements.txt # Dependencies
-├── prediction_results.csv
-├── plant_disease_model.h5 # Trained model
-├── sample_image1.jpg # Add the leaf images for prediction directly in the root directory 
-└── split_dataset.py # Dataset splitting script
+├── static/
+│   ├── uploads/
+│   └── style.css
+├── templates/
+│   └── index.html
+├── app.py
+├── plant_disease_model.py
+├── test_prediction.py
+├── plant_disease_model.keras
+├── requirements.txt
+└── split_dataset.py
 ```
 
----
+## Model Workflow
 
-## Disease Detection Workflow
+![Model Flowchart](images/tomatoleafai_workflow.jpg)
 
-![TomatoLeafAI Workflow](images/tomatoleafai_workflow.jpg)
+## How It Works
 
----
+1. Upload an image of a tomato leaf using the web interface.
+2. The model predicts the disease class.
+3. Displays the result and treatment info (if available).
 
-## 🔍 How It Works
+## Getting Started
 
-1. Capture or upload an image of a tomato leaf.
-2. The model analyzes the image and classifies it as:
-   - Early Blight
-   - Late Blight
-   - Healthy
-3. Future updates will include voice-based feedback and Firebase integration.
-
----
-
-## 🧪 Setup Instructions
-
-### 1. Clone the Repository
+### Clone the Repo
 
 ```bash
 git clone https://github.com/yourusername/TomatoLeafAI.git
 cd TomatoLeafAI
 ```
 
-### 2. Install Dependencies
+### Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Prepare Dataset
+### Prepare Dataset
 
-Place the following folders inside a raw_tomato_dataset/ directory:
+Download and place folders inside `raw_tomato_dataset/`:
 
-```text
-raw_tomato_dataset/
-├── Tomato___Early_blight/
-├── Tomato___Late_blight/
-└── Tomato___healthy/
-```
+- Tomato___Early_blight/
+- Tomato___Late_blight/
+- Tomato___healthy/
 
-Then run the dataset splitter to create training and validation sets:
+Then run:
 
 ```bash
 python split_dataset.py
 ```
 
-### 4. Train the Model
+### Train the Model
 
 ```bash
 python plant_disease_model.py
 ```
 
-The trained model will be saved as:
-plant_disease_model.h5
+### Start the Flask App
 
-### 5. Test the Model
+```bash
+python app.py
+```
 
-Place a test image (e.g., leaf.jpg) in the project directory. Update the filename inside test_prediction.py and run:
+Go to `http://127.0.0.1:5000` in your browser.
+
+### Optional: Test Prediction from CLI
+
+Add a leaf image in `test_images/`, update path in `test_prediction.py`, and run:
 
 ```bash
 python test_prediction.py
 ```
 
-### 6. Convert to TensorFlow Lite (Optional)
+## Project Kisan
 
-For mobile or Firebase deployment.
+TomatoLeafAI is a key module of Project Kisan for Google Hackathon 2025. The project empowers small farmers using AI tools.
 
----
+Modules in development:
 
-## 🌱 Project Kisan
+- Disease Detection [Done]
+- Market Price Insights [In progress]
+- Scheme Finder [In progress]
+- Multilingual Voice Assistant [In progress]
 
-*TomatoLeafAI* is a core module of **Project Kisan**, submitted to the Google Hackathon 2025. The objective of the project is to build a voice-enabled AI assistant that delivers essential agricultural support to small and marginal farmers through user-friendly, technology-driven tools.
+## Contact
 
-### Modules Included in Project Kisan
-
-- **Disease Detection** – *In Progress*  
-- **Market Price Insights** – *In Progress*  
-- **Government Scheme Finder** – *In Progress*  
-- **Multilingual Voice Support** – *In Progress*
-
----
-
-## 📞 Contact Information
-
-- **Email:** [ankitabcd1718@gmail.com](mailto:ankitabcd1718@gmail.com)  
-- **GitHub:** [https://github.com/ankit-prabhavak](https://github.com/ankit-prabhavak)  
-- **LinkedIn:** [https://linkedin.com/in/ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
-
----
-
-## Acknowledgements
-
-- **Dataset:** [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)  
-- **Technologies Used:** TensorFlow, Keras, OpenCV, tqdm
+- Email: (mailto:ankitabcd1718@gmail.com)  
+- GitHub: [github.com/ankit-prabhavak](https://github.com/ankit-prabhavak)  
+- LinkedIn: [linkedin.com/in/ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
