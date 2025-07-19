@@ -52,6 +52,10 @@ project-kisan-disease/
 
 ![Model Flowchart](images/tomatoleafai_workflow.jpg)
 
+## Here’s how the TomatoLeafAI detection page looks in action:
+
+![Web Page Screenshot](images/tomatoleafai_screenshot.png)
+
 ## How It Works
 
 1. Upload an image of a tomato leaf using the web interface.
