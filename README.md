@@ -54,7 +54,7 @@ project-kisan-disease/
 
 ## Here’s how the TomatoLeafAI detection page looks in action:
 
-![Web Page Screenshot](images/tomatoleafai_screenshot.png)
+![Web Page Screenshot](images/tomatoleafai.png)
 
 ## How It Works
 
