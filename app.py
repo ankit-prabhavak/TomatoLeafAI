@@ -59,9 +59,14 @@ def predict_and_save_results(upload_folder):
             treatment = get_treatment_recommendation(pred_class, confidence)
 
             writer.writerow([filename, pred_class, f"{confidence:.2f}", treatment, timestamp])
+            if pred_class == 'Tomato_healthy':
+                pred_class_clean = 'Healthy'
+            else:
+                pred_class_clean = pred_class.replace('Tomato_', '').replace('_', ' ').title()
+
             results.append({
                 'image': filename,
-                'pred_class': pred_class,
+                'pred_class': pred_class_clean,
                 'confidence': f"{confidence:.2f}",
                 'treatment': treatment,
                 'timestamp': timestamp
