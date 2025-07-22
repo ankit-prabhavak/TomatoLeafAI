@@ -48,10 +48,6 @@ project-kisan-disease/
 └── split_dataset.py
 ```
 
-## Model Workflow
-
-![Model Flowchart](images/tomatoleafai_workflow.jpg)
-
 ## Here’s how the TomatoLeafAI detection page looks in action:
 
 ![Web Page Screenshot](images/tomatoleafai.png)
