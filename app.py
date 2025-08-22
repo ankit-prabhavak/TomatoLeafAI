@@ -59,14 +59,7 @@ def predict_and_save_results(upload_folder):
             treatment = get_treatment_recommendation(pred_class, confidence)
 
             writer.writerow([filename, pred_class, f"{confidence:.2f}", treatment, timestamp])
-            # results.append({
-            #     'image': filename,
-            #     'pred_class': pred_class,
-            #     'confidence': f"{confidence:.2f}",
-            #     'treatment': treatment,
-            #     'timestamp': timestamp
-            # })
-            # Normalize class name for template
+           
             if pred_class == 'Tomato_healthy':
                 pred_class_clean = 'Healthy'
             else:
@@ -126,3 +119,14 @@ def download_csv():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
+    
+     # results.append({
+            #     'image': filename,
+            #     'pred_class': pred_class,
+            #     'confidence': f"{confidence:.2f}",
+            #     'treatment': treatment,
+            #     'timestamp': timestamp
+            # })
+            # Normalize class name for template
