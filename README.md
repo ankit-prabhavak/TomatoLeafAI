@@ -109,16 +109,6 @@ Add a leaf image in `test_images/`, update path in `test_prediction.py`, and run
 python test_prediction.py
 ```
 
-## Project Kisan
-
-TomatoLeafAI is a key module of Project Kisan for Google Hackathon 2025. The project empowers small farmers using AI tools.
-
-Modules in development:
-
-- Disease Detection [Done]
-- Market Price Insights [In progress]
-- Scheme Finder [In progress]
-- Multilingual Voice Assistant [In progress]
 
 ## Contact
 
