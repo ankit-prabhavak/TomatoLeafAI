@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icon.ico') }}">
+
 </head>
 <body>
     <!-- Header -->
@@ -128,10 +130,21 @@
                         <div class="summary-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <div class="summary-content">
+                        <!-- <div class="summary-content">
                             <h3>{{ results|selectattr('pred_class', 'ne', 'Healthy')|list|length }}</h3>
                             <p>Diseases Detected</p>
+                        </div> -->
+                        <div class="summary-content">
+                             {% set disease_results = results | selectattr('pred_class', 'ne', 'Healthy') | list %}
+                             {% if disease_results | length == 0 %}
+                                    <h3>No Disease Detected</h3>
+                                    <p>All uploaded leaves are healthy</p>
+                             {% else %}
+                                   <h3>{{ disease_results | length }}</h3>
+                                   <p>Diseases Detected</p>
+                            {% endif %}
                         </div>
+
                     </div>
                     <div class="summary-card">
                         <div class="summary-icon">
@@ -154,7 +167,7 @@
                         <div class="result-content">
                             <h3 class="disease-name">{{ res.pred_class }}</h3>
                             <div class="disease-status {{ 'healthy' if res.pred_class == 'Healthy' else 'disease' }}">
-                                <i class="fas {{ 'fa-check' if res.pred_class == 'Healthy' else 'fa-exclamation-triangle' }}"></i>
+                                <i class="fa-solid {{ 'fa-check' if res.pred_class == 'Healthy' else 'fa-exclamation-triangle' }}"></i>
                                 {{ 'Healthy Leaf' if res.pred_class == 'Healthy' else 'Disease Detected' }}
                             </div>
                             <div class="diagnosis">
@@ -198,8 +211,8 @@
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>

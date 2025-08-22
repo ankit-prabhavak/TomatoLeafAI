@@ -1,0 +1,37 @@
+# Ignore virtual environment folders
+venv/
+env/
+tfenv/
+
+# Ignore dataset folders
+raw_tomato_dataset/
+dataset/
+test_images/
+
+# Ignore model checkpoints (optional if you want to keep model small)
+*.h5
+*.keras
+*.json
+*.png
+*.csv
+
+dataset_analysis_script.py
+quick_fix_script.py
+prediction_results.csv
+
+
+# Ignore system/IDE files
+_pycache_/
+*.pyc
+.DS_Store
+*.log
+
+# Ignore everything in static/
+static/*
+
+# But keep style.css
+!static/style.css
+
+
+# Ignore Jupyter notebooks (optional)
+*.ipynb

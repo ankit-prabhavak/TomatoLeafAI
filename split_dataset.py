@@ -35,4 +35,4 @@ for category in tqdm(os.listdir(source_dir), desc="Splitting dataset"):
             os.path.join(val_dir, category, img)
         )
 
-print("✅ Dataset split complete!")
+print("Dataset split complete!")

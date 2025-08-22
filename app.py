@@ -59,6 +59,14 @@ def predict_and_save_results(upload_folder):
             treatment = get_treatment_recommendation(pred_class, confidence)
 
             writer.writerow([filename, pred_class, f"{confidence:.2f}", treatment, timestamp])
+            # results.append({
+            #     'image': filename,
+            #     'pred_class': pred_class,
+            #     'confidence': f"{confidence:.2f}",
+            #     'treatment': treatment,
+            #     'timestamp': timestamp
+            # })
+            # Normalize class name for template
             if pred_class == 'Tomato_healthy':
                 pred_class_clean = 'Healthy'
             else:
@@ -72,6 +80,7 @@ def predict_and_save_results(upload_folder):
                 'timestamp': timestamp
             })
 
+
     return results, output_file
 
 # Treatment info
@@ -80,6 +89,9 @@ def get_treatment_recommendation(pred_class, confidence):
         return "Low confidence. Please check manually."
 
     treatments = {
+        'Tomato___Early_blight': "Apply fungicides containing chlorothalonil or mancozeb. Remove infected leaves, ensure good air circulation, and avoid overhead watering.",
+        'Tomato___Late_blight': "Apply fungicides with copper compounds or mancozeb. Remove and destroy infected plants immediately. Avoid working in wet conditions.",
+        'Tomato___healthy': "Plant appears healthy. Continue regular monitoring, maintain proper spacing, and ensure adequate nutrition.",
         'Tomato_Early_blight': "Use basic fungicide. Remove affected leaves.",
         'Tomato_Late_blight': "Apply fungicide. Avoid watering leaves.",
         'Tomato_healthy': "Plant is healthy.",
