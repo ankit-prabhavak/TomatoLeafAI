@@ -114,4 +114,4 @@ python test_prediction.py
 
 - Email: ankitabcd1718@gmail.com
 - GitHub: [github.com/ankit-prabhavak](https://github.com/ankit-prabhavak)  
-- LinkedIn: [linkedin.com/in/ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak)
+- LinkedIn: [linkedin.com/in/ankit-prabhavak](https://linkedin.com/in/ankit-prabhavak))
